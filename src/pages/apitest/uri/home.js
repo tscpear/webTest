@@ -216,7 +216,7 @@ export default class UriHome extends Component {
         )
         const extra = (
 
-            <Button type="primary" color='pick'>
+            <Button type="primary" color='pick' onClick={()=>this.props.history.push('/apitest/uri/add')}>
                 <PlusOutlined />
                 添加
             </Button>

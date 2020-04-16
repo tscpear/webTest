@@ -21,13 +21,12 @@ class Header extends Component {
             if (item.key === path) {//如果当前item的对象与path匹配
                 title = item.title
             } else if (item.children) {
-                if(path.indexOf('/apitest/uri/updata')===0){
+                if(path.indexOf('/apitest/uri')===0){
                     path = '/apitest/uri'
-                    titles = '-编辑'
                 }
                 const cItem = item.children.find(cItem => cItem.key === path)
                 if (cItem) {
-                    title = cItem.title + titles
+                    title = cItem.title
                 }
             }
         })
@@ -54,7 +53,7 @@ class Header extends Component {
         const title = this.getTitle()
         const userName = memoryUtils.user.username
         return (
-            <div className='header'>
+            <div className='header' >
                 <div className='header-left'>
                     <span>{title}</span>
                 </div>
